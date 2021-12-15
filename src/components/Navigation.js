@@ -5,13 +5,13 @@ import "./Navigation.css";
 function Navigation() {
   return (
     <div className="nav">
-      <Link to="/">home</Link>
+      <Link to="/">Головна</Link>
       <Link to={{
         pathname: '/about',
         state: {
           fromLocation: true,
         }
-      }}>about the project</Link>
+      }}>Про проект</Link>
     </div>
   );
 }
