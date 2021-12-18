@@ -8,7 +8,7 @@ function Movie({ id, title, summary, poster, year, genres }) {
   return (
     <div className="movie">
     <Link to={{
-      pathname: `/movie/:${id}`,
+      pathname: `/movie/:${id}`, //назва посилання
       state: {
         year,
         title, // = title: title
@@ -23,7 +23,7 @@ function Movie({ id, title, summary, poster, year, genres }) {
           <h3 className="movie__title">{title}</h3>
           <h5 className="movie__year">{year}</h5>
           <ul className="movie__genres">
-            {genres.map((genre, index) => {
+            {genres.map((genre, index) => { // функція виведення даних із масиву із жанрами
               return <li key={index} className="genres_genre"> {genre}</li>;
             })}
           </ul>
@@ -35,7 +35,7 @@ function Movie({ id, title, summary, poster, year, genres }) {
   );
 }
 
-Movie.propTypes = {
+Movie.propTypes = { //перевірка типу отриманих даних
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   summary: PropTypes.string.isRequired,

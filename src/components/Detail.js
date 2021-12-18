@@ -2,9 +2,9 @@ import React from "react";
 import "./detail.css"
 
 class Detail extends React.Component {
-    componentDidMount(){
+    componentDidMount(){  // виклик функції відразу після формування dom-дерева
         const {location, history} = this.props;
-        if (location.state === undefined) {
+        if (location.state === undefined) { //в разі відсутнього опису перенести на головну сторінку 
             history.push('/');
         }
     }

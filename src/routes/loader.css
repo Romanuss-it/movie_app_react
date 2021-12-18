@@ -1,0 +1,40 @@
+
+.loader{
+	width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+} 
+
+.loader__filmstrip {
+        position: relative;
+        width: 56px;
+        height: 70px;
+        background:#3D314A;
+        z-index: -1;
+}
+.loader__filmstrip:before{
+            content: '';
+            position: absolute;
+            height: 120%;
+            border-left: 5px dashed #b9cee2;
+            animation: roll 20ms infinite;
+			left: 5px;
+        }
+.loader__filmstrip:after{
+            content: '';
+            position: absolute;
+            height: 120%;
+            border-left: 5px dashed #b9cee2;
+            animation: roll 20ms infinite;
+			right: 5px;
+        }
+
+
+
+@keyframes roll {
+    0% {top: 0px;}
+    100% {top: -15px;}
+}
